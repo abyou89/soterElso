@@ -13,6 +13,7 @@ public class GitOssz {
         osszegzes(tomb);
         megszamlalas(tomb);
         maximumKivalasztas(tomb);
+        minimumKivalasztas(tomb);
         tombKiir(tomb);
     
     }
@@ -52,6 +53,7 @@ public class GitOssz {
         System.out.println("A legnagyobb szám értéke: " + tomb[maxIndex]);
     
     }
+    
 
     private static void tombKiir(int[] tomb) {
         for (int i = 0; i < tomb.length; i++) {
@@ -59,5 +61,19 @@ public class GitOssz {
         }
         System.out.println("");
     }
-  
+
+    private static void minimumKivalasztas(int[] tomb) {
+        int minIndex = 0;
+        for (int i = 1; i < tomb.length; i++) {
+            if(tomb[i] < tomb[minIndex]){
+                minIndex = i;
+            }
+        }
+        System.out.println("a legkisebb elem értéke: " + minIndex);
+        System.out.println("a legkisebb elem helye: " + tomb[minIndex]);
+    
+    }
+    
 }
+  
+
