@@ -12,6 +12,7 @@ public class GitOssz {
         int[] tomb = feltoltes();
         osszegzes(tomb);
         megszamlalas(tomb);
+        maximumKivalasztas(tomb);
         tombKiir(tomb);
     
     }
@@ -39,6 +40,18 @@ public class GitOssz {
         }
         System.out.println("párosak száma: " + db);
     }
+    private static void maximumKivalasztas(int[] tomb) {
+        int maxIndex = 0;
+        for (int i = 1; i < tomb.length; i++) {
+
+            if(tomb[i] > tomb[maxIndex]){
+                maxIndex = i;
+            }
+        }
+        System.out.println("A legnagyobb szám helye: " + maxIndex);
+        System.out.println("A legnagyobb szám értéke: " + tomb[maxIndex]);
+    
+    }
 
     private static void tombKiir(int[] tomb) {
         for (int i = 0; i < tomb.length; i++) {
@@ -46,5 +59,5 @@ public class GitOssz {
         }
         System.out.println("");
     }
-    
+  
 }
