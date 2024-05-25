@@ -10,6 +10,8 @@ public class GitOssz {
     public static void main(String[] args) {
         
         int[] tomb = feltoltes();
+        osszegzes(tomb);
+        megszamlalas(tomb);
         tombKiir(tomb);
     
     }
@@ -21,11 +23,28 @@ public class GitOssz {
         }
     return szamok;
     }
+    private static void osszegzes(int[] tomb) {
+        int osszeg = 0;
+        for (int i = 0; i < tomb.length; i++) {
+            osszeg += tomb[i];
+        }
+        System.out.println("szamok összege: " + osszeg);
+    }
+    private static void megszamlalas(int[] tomb) {
+        int db = 0;
+        for (int i = 0; i < tomb.length; i++) {
+            if(tomb[i] % 2 == 0){
+                db++;
+            }
+        }
+        System.out.println("párosak száma: " + db);
+    }
 
     private static void tombKiir(int[] tomb) {
         for (int i = 0; i < tomb.length; i++) {
-            System.out.printf("%d", tomb[i]);
+            System.out.printf("%d ",tomb[i]);
         }
+        System.out.println("");
     }
     
 }
