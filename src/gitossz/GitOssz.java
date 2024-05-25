@@ -71,6 +71,7 @@ public class GitOssz {
         }
         System.out.println("a legkisebb elem értéke: " + minIndex);
         System.out.println("a legkisebb elem helye: " + tomb[minIndex]);
+        System.out.println("a legkisebb elem helye: " + tomb[minIndex]);
     
     }
     
